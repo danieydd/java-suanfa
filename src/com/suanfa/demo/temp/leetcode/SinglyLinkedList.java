@@ -1,8 +1,5 @@
 package com.suanfa.demo.temp.leetcode;
 
-import com.google.gson.Gson;
-import org.junit.Test;
-
 /**
  * @ClassName SinglyLinkedList
  * @Description 给你单链表的头节点 head ，请你反转链表，并返回反转后的链表。
@@ -43,6 +40,7 @@ public class SinglyLinkedList {
         }
         return pre;
     }
+
     /***
      * @description: 利用节点的构造函数
      * @author danie
@@ -52,14 +50,16 @@ public class SinglyLinkedList {
     public ListNode reverseList2(ListNode head) {
         ListNode ans = null;
         for (ListNode x = head; x != null; x = x.next) {
-            ans = new ListNode(x.val,ans);
-            System.out.println(new Gson().toJson(ans));
+            ans = new ListNode(x.val, ans);
+           // System.out.println(new Gson().toJson(ans));
         }
         return ans;
     }
+
     /**
      * 以链表1->2->3->4->5举例
      * 递归
+     *
      * @param head
      * @return
      */
@@ -98,7 +98,7 @@ public class SinglyLinkedList {
         head.next = null;
         return newHead;
     }
-    @Test
+
     public void test() {
         ListNode listNode = new ListNode(5, null);
         ListNode listNode2 = new ListNode(4, listNode);
@@ -106,7 +106,7 @@ public class SinglyLinkedList {
         ListNode listNode4 = new ListNode(2, listNode3);
         ListNode listNode5 = new ListNode(1, listNode4);
         ListNode res = reverseList3(listNode5);
-        System.out.println(new Gson().toJson(res));
+        //System.out.println(new Gson().toJson(res));
 
     }
 }

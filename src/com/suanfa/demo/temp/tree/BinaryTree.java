@@ -1,7 +1,5 @@
 package com.suanfa.demo.temp.tree;
 
-import com.google.gson.Gson;
-
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -121,7 +119,7 @@ public class BinaryTree {
     public static void main(String[] args) {
         LinkedList<Integer> linkedList = new LinkedList<>(Arrays.asList(new Integer[]{3, 2, 9, null, null, 10, null, null, 8, null, 4}));
         TreeNode binaryTree = createBinaryTree(linkedList);
-        System.out.println(new Gson().toJson(binaryTree));
+     //   System.out.println(new Gson().toJson(binaryTree));
         System.out.println("前序遍历");
         preOrderTraversal(binaryTree);
         System.out.println("中序遍历");

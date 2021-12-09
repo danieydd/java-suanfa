@@ -1,7 +1,5 @@
 package com.suanfa.demo.temp.weiruan;
 
-import com.google.gson.Gson;
-import org.junit.Test;
 
 /**
  * @ClassName Array48
@@ -36,11 +34,11 @@ public class Array48 {
         }
     }
 
-        @Test
+        //@Test
         public void test() {
             int[][] array = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
             rotate(array);
-            System.out.println(new Gson().toJson(array));
+           // System.out.println(new Gson().toJson(array));
         }
     }
 
